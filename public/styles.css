@@ -46,3 +46,19 @@ header {
     width: 20%;
     margin-right: 10px;
 }
+
+.lowPriority{
+    background: cornflowerblue;
+}
+
+.mediumPriority{
+background: seagreen;
+}
+
+.highPriority{
+background: orange;
+}
+
+.veryHighPriority{
+background: red;
+}

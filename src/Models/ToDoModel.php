@@ -15,17 +15,23 @@ class ToDoModel
 
     public function getTasks()
     {
-        $query = $this->db->prepare('SELECT * FROM `tasks` WHERE `completed` = 0;');
+        $query = $this->db->prepare("SELECT `tasks`.`id`, `tasks`.`title`, `tasks`.`description`, `tasks`.`completed`, `priorities`.`priority` AS 'Priority' 
+FROM `tasks` JOIN `priorities`
+ON `tasks`.`priority_id` = `priorities`.`id`
+WHERE `completed` = 0;");
         $query->execute();
         return $query->fetchAll();
     }
 
     public function addTask($task)
     {
-        $query = $this->db->prepare('INSERT INTO `tasks` (`title`, `description`, `completed`) VALUES (:title, :description , 0 );');
+        $priorityAsInt = intval($task['priority']);
+
+        $query = $this->db->prepare('INSERT INTO `tasks` (`title`, `description`, `completed`, `priority_id`) VALUES (:title, :description , 0 , :priority_id);');
         $query->execute([
             "title" => $task['title'],
-            "description" => $task['description']
+            "description" => $task['description'],
+            "priority_id" => $priorityAsInt
         ]);
     }
 
