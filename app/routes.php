@@ -19,6 +19,8 @@ return function (App $app) {
 
     $app->post('/tasks/deleted/{id}', \App\Controllers\DeleteTasksController::class);
 
+    $app->post('/tasks/restore/{id}', \App\Controllers\RestoreTaskController::class);
+
 //    $app->delete('/tasks/completed/{id}', );
 
 };

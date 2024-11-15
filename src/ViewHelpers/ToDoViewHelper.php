@@ -43,12 +43,14 @@ class ToDoViewHelper
             $output .= "<div class='taskTile''>";
             $output .= "<h1>{$task['title']}</h1>";
             $output .= "<p>{$task['description']}</p>";
+            $output .= "<div>";
             $output .= "<form method='POST' action='/tasks/deleted/{$task['id']}'>";
             $output .= "<button type='submit' >Delete</button>";
             $output .= "</form>";
             $output .= "<form method='POST' action='/tasks/restore/{$task['id']}'>";
             $output .= "<button type='submit' >Restore</button>";
             $output .= "</form>";
+            $output .= "</div>";
             $output .= "</div>";
 
         }

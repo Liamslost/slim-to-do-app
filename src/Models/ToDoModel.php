@@ -51,6 +51,15 @@ WHERE `completed` = 0;");
         return $query->fetchAll();
     }
 
+    public function restoreTask($taskId)
+    {
+        $query = $this->db->prepare('UPDATE `tasks` SET `completed` = 0 WHERE `id` = :id;');
+        $query->execute([
+            "id" => $taskId
+        ]);
+        return $query->fetchAll();
+    }
+
     public function deleteTask($taskId)
     {
         $query = $this->db->prepare('DELETE FROM `tasks` WHERE `id` = :id;');
