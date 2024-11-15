@@ -2,63 +2,141 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 header {
-    border: 5px solid #6200ff;
     width: 100%;
-    display: flex;
+    padding: 20px;
     justify-content: center;
+
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
 }
-.container{
+
+body {
+    background: #bfbfbf;
+}
+
+.container {
     padding: 10px;
-    display: flex;
+
 }
 
 .taskTray {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     gap: 10px;
+
 
 }
 
 .taskTile {
-    border: 5px solid black;
+    background: white;
+    border: 5px solid #888888;
+    box-shadow: 20px 8px 20px 10px rgba(0, 0, 0, 0.22);
     border-radius: 1rem;
-    width: 300px;
+    width: 75%;
     padding: 2rem;
+    margin: 0 auto;
 
     h1 {
-        color: #6200ff;
+        font-size: 3rem;
         text-align: center;
-
+        padding-bottom: 30px;
     }
 
     p {
-        color: blue;
+        color: #939393;
+        font-size: 2rem;
+        height: 100px;
+        padding-bottom: 15px;
     }
 
 }
 
-.inputField {
-    border: 3px solid brown;
-    height: 100px;
-    width: 20%;
-    margin-right: 10px;
+.priorityTag {
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px 5px;
 }
 
-.lowPriority{
+.inputField {
+    padding: 30px 10px ;
+    display: flex;
+    justify-content: space-between;
+
+
+    button {
+        width: 300px;
+    }
+
+    input, select {
+        height: 60px;
+        width: 295px;
+        margin: 5px;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+}
+
+.sortContainer {
+    width: 300px;
+    height: 300px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+
+input {
+    padding-bottom: 90px;
+}
+
+}
+
+.right {
+    float: right;
+}
+
+.flex {
+    display: flex;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.button {
+    background: black;
+    border: none;
+    color: white;
+    padding: 30px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.lowPriority {
+    color: white;
     background: cornflowerblue;
 }
 
-.mediumPriority{
-background: seagreen;
+.mediumPriority {
+    color: white;
+    background: seagreen;
 }
 
-.highPriority{
-background: orange;
+.highPriority {
+
+    background: orange;
 }
 
-.veryHighPriority{
-background: red;
+.veryHighPriority {
+    color: white;
+    background: red;
 }

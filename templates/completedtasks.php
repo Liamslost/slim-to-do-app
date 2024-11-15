@@ -9,11 +9,12 @@
     <link href="../styles.css" rel="stylesheet">
     <script src="../script.js" defer></script>
 </head>
-<div><a href="/tasks">
-        <button>BACK</button></div></a>
+<header>
+    <a href="/tasks">
+        <button class="button">BACK</button>
+    </a>
 <div>
     <h1>To-Do</h1>
-    <p>do it</p>
 </div>
 </header>
 <body>

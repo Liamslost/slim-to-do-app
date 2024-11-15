@@ -24,10 +24,12 @@ class ToDoViewHelper
             $output .= "<div class='taskTile''>";
             $output .= "<h1>{$task['title']}</h1>";
             $output .= "<p>{$task['description']}</p>";
-            $output .= "<div class='{$priorityColour}'>{$task['Priority']}</div>";
+            $output .= "<div class='flex between'>";
+            $output .= "<div class='{$priorityColour} priorityTag'>{$task['Priority']} Priority</div>";
             $output .= "<form method='POST' action='/tasks/completed/{$task['id']}'>";
-            $output .= "<button type='submit' class='completeButton'>Complete</button>";
+            $output .= "<button type='submit' class='completeButton button '>Complete</button>";
             $output .= "</form>";
+            $output .= "</div>";
             $output .= "</div>";
 
         }
@@ -43,12 +45,12 @@ class ToDoViewHelper
             $output .= "<div class='taskTile''>";
             $output .= "<h1>{$task['title']}</h1>";
             $output .= "<p>{$task['description']}</p>";
-            $output .= "<div>";
+            $output .= "<div class='flex between'>";
             $output .= "<form method='POST' action='/tasks/deleted/{$task['id']}'>";
-            $output .= "<button type='submit' >Delete</button>";
+            $output .= "<button  class='button' type='submit' >Delete</button>";
             $output .= "</form>";
             $output .= "<form method='POST' action='/tasks/restore/{$task['id']}'>";
-            $output .= "<button type='submit' >Restore</button>";
+            $output .= "<button class='button' type='submit' >Restore</button>";
             $output .= "</form>";
             $output .= "</div>";
             $output .= "</div>";
