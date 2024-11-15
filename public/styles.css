@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    border: 5px solid #6200ff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    padding: 10px;
+    display: flex;
+}
+
+.taskTray {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.taskTile {
+    border: 5px solid black;
+    border-radius: 1rem;
+    width: 300px;
+    padding: 2rem;
+
+    h1 {
+        color: #6200ff;
+        text-align: center;
+
+    }
+
+    p {
+        color: blue;
+    }
+
+}
+
+.inputField {
+    border: 3px solid brown;
+    height: 100px;
+    width: 20%;
+    margin-right: 10px;
+}
