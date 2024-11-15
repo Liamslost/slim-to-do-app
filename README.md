@@ -1,38 +1,5 @@
-# Slim Framework 4 Skeleton Application
+A To-Do list app made over 24 hours focussing on functionality over design.
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation along with the PHP-View template renderer. It also uses the Monolog logger.
+I set out to be able to create new tasks, complete tasks and then delete the completed tasks on a separted page. I enjoyed doing this project so spent a little extra time on it and added priority tags that were colour coded to priority and am currently working on sorting the tasks by either ascending or descending priority.
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
-
-## Install the Application
-
-Create a new directory with your project name, e.g:
-
-
-```bash
-mkdir academyProject
-```
-
-Once inside the new directory, clone this repo:
-
-```bash
-git clone git@github.com:Mayden-Academy/slim4-skeleton.git .
-```
-
-One cloned, you must install the slim components by running:
-
-```bash
-composer install
-```
-
-To run the application locally:
-```bash
-composer start
-
-```
-Run this command in the application directory to run the test suite
-```bash
-composer test
-```
-
-That's it! Now go build something cool.
+this extra work should be completed withing a couple hours of extra work
